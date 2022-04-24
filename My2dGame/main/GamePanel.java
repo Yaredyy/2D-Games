@@ -1,5 +1,8 @@
 package My2dGame.main;
 
+import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel{
@@ -16,6 +19,12 @@ public class GamePanel extends JPanel{
     final int screenHeight = tileSize*maxScreenRow; //576 pixels
 
     
+    //onstructor of gamePanel
+    public GamePanel(){
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
+        this.setBackground(Color.black);
+        this.setDoubleBuffered(true);
+    }
 
 
 }
